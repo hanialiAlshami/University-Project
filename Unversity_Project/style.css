@@ -1,0 +1,354 @@
+/* ==================================================
+   RESET & BASE
+================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #4b7f2f;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #4b7f2f;
+}
+
+.login-link {
+    background: #7cb342;
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.login-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================================
+   HERO
+================================================== */
+.hero {
+    position: relative;
+    height: 420px;
+    background: url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+.btn,
+.submit-btn {
+    background: #7cb342;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover,
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================================
+   SECTIONS
+================================================== */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4b7f2f;
+}
+
+/* ==================================================
+   ABOUT
+================================================== */
+.about {
+    background: #fff;
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-logo img {
+    width: 220px;
+}
+
+/* ==================================================
+   GRID & CARDS (عام)
+================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card,
+.program-card,
+.dept-card,
+.news-card,
+.staff-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+}
+
+.card:hover,
+.program-card:hover,
+.dept-card:hover,
+.news-card:hover,
+.staff-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ==================================================
+   PAGE TITLE
+================================================== */
+.page-title {
+    background: #eef5ea;
+    padding: 40px 0;
+    text-align: center;
+    color: #4b7f2f;
+}
+
+/* ==================================================
+   TABLES (ADMIN)
+================================================== */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: #fff;
+}
+
+.styled-table thead {
+    background: #7cb342;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+td.details {
+    max-width: 300px;
+    word-break: break-word;
+}
+
+td.date {
+    white-space: nowrap;
+}
+
+/* ==================================================
+   ADMIN BUTTONS
+================================================== */
+.btn-edit {
+    padding: 6px 15px;
+    border: 2px solid #8b0000;
+    border-radius: 20px;
+    color: #8b0000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-edit:hover {
+    background: #8b0000;
+    color: #fff;
+}
+
+.btn-delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid red;
+    color: red;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background: red;
+    color: #fff;
+}
+
+/* ==================================================
+   NEWS
+================================================== */
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+
+/* ==================================================
+   LOGIN
+================================================== */
+.login-body {
+    background: #eef5ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    width: 360px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-box img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+    background: linear-gradient(135deg, #2f2f2f, #1f1f1f);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ================== ADD BUTTON (ADMIN) ================== */
+.btn-add {
+    display: inline-block;
+    background: linear-gradient(135deg, #7cb342, #5fa82e);
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
